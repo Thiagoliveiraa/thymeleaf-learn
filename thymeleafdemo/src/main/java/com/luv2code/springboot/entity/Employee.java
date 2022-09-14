@@ -1,4 +1,4 @@
-package com.luv2code.springboot.model;
+package com.luv2code.springboot.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

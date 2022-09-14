@@ -1,6 +1,6 @@
 package com.luv2code.springboot.service;
 
-import com.luv2code.springboot.model.Employee;
+import com.luv2code.springboot.entity.Employee;
 
 import java.util.List;
 

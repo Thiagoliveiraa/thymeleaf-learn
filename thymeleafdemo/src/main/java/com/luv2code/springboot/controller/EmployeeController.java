@@ -1,6 +1,6 @@
 package com.luv2code.springboot.controller;
 
-import com.luv2code.springboot.model.Employee;
+import com.luv2code.springboot.entity.Employee;
 import com.luv2code.springboot.service.EmployeeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,7 +29,7 @@ public class EmployeeController {
         // add to the spring model
         theModel.addAttribute("employees", theEmployees);
 
-        return "list-employees";
+        return "employees/list-employees";
     }
 
     @GetMapping("/showFormForAdd")
@@ -44,9 +44,9 @@ public class EmployeeController {
     }
 
     @PostMapping("/save")
-    public String saveEmployee(@ModelAttribute("employee") Employee employee) {
+    public String saveEmployee(@ModelAttribute("employee") Employee theEmployee) {
         // save the employee
-        employeeService.save(employee);
+        employeeService.save(theEmployee);
 
         return "redirect:/employees/list";
     }
